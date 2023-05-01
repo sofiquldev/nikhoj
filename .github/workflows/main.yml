@@ -23,6 +23,7 @@ jobs:
       - name: Build
         run: |
           sudo npm i -g pnpm 
+          pnpm install
           pnpm build
           pnpm export
 
