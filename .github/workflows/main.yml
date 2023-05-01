@@ -18,12 +18,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 'lts/*'
-          cache: 'npm'
+        run: | 
+          sudo npm i -g pnpm
+          pnpm install
 
       - name: Build
         run: |
-          sudo npm i -g pnpm 
-          pnpm install
           pnpm build
           pnpm export
 
